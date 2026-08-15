@@ -1,0 +1,381 @@
+.page {
+  min-height: 100svh;
+  background: #07111f;
+  color: #f7f9fc;
+  font-family:
+    var(--font-geist-sans),
+    "Geist",
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 720px;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 32px 20px;
+  flex-direction: column;
+}
+
+.brand {
+  margin: 0;
+  color: #5b8cff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+}
+
+.eyebrow {
+  margin: 8px 0 0;
+  color: #8895a7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+
+.progressSection {
+  margin-top: 40px;
+}
+
+.progressMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  color: #8895a7;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.progressValue {
+  font-family:
+    var(--font-geist-mono),
+    "Geist Mono",
+    ui-monospace,
+    monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.progressTrack {
+  height: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 7%);
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: inherit;
+  background: #5b8cff;
+  transition: width 500ms ease-out;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  padding: 48px 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.screen {
+  animation: screen-enter 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.questionTitle {
+  margin: 0;
+  color: #f7f9fc;
+  font-size: clamp(30px, 6vw, 40px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  white-space: pre-line;
+}
+
+.helperText {
+  max-width: 576px;
+  margin: 16px 0 0;
+  color: #8895a7;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.fieldArea {
+  margin-top: 40px;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 56px;
+  padding: 0 20px;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 16px;
+  outline: none;
+  background: #101b2e;
+  color: #f7f9fc;
+  font: inherit;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.input::placeholder {
+  color: rgb(136 149 167 / 55%);
+}
+
+.input:focus {
+  border-color: rgb(91 140 255 / 60%);
+  box-shadow: 0 0 0 4px rgb(91 140 255 / 10%);
+}
+
+.input[type="date"] {
+  color-scheme: dark;
+}
+
+.textarea {
+  min-height: 160px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  resize: none;
+  line-height: 1.5;
+}
+
+.actionFields {
+  display: grid;
+  gap: 12px;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.option {
+  height: 56px;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 16px;
+  background: #101b2e;
+  color: #f7f9fc;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.option:hover {
+  border-color: rgb(91 140 255 / 40%);
+  background: rgb(91 140 255 / 6%);
+}
+
+.option:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #5b8cff;
+}
+
+.option[data-selected="true"] {
+  border-color: rgb(91 140 255 / 60%);
+  background: rgb(91 140 255 / 10%);
+  color: #5b8cff;
+}
+
+.customInput {
+  margin-top: 12px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  height: 44px;
+  border: 0;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.primaryButton {
+  padding: 0 20px;
+  background: #5b8cff;
+  color: #fff;
+  transition:
+    background-color 160ms ease,
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.primaryButton:hover {
+  background: #6c98ff;
+}
+
+.primaryButton:active {
+  transform: scale(0.98);
+}
+
+.primaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.secondaryButton {
+  padding: 0 12px;
+  background: transparent;
+  color: #8895a7;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.secondaryButton:hover {
+  background: rgb(255 255 255 / 5%);
+  color: #f7f9fc;
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 2px solid #5b8cff;
+  outline-offset: 3px;
+}
+
+.summaryCard {
+  overflow: hidden;
+  margin-top: 40px;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 16px;
+  background: #101b2e;
+}
+
+.summaryRow {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+}
+
+.summaryRow + .summaryRow {
+  border-top: 1px solid rgb(255 255 255 / 7%);
+}
+
+.summaryLabel {
+  color: #8895a7;
+  font-size: 14px;
+}
+
+.summaryValue,
+.actionList {
+  margin: 0;
+  color: #f7f9fc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.actionList {
+  padding-left: 20px;
+}
+
+.success {
+  display: flex;
+  max-width: 512px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.successIcon {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgb(91 140 255 / 20%);
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(91 140 255 / 10%);
+  color: #5b8cff;
+}
+
+.successTitle {
+  margin: 28px 0 0;
+  color: #f7f9fc;
+  font-size: clamp(30px, 6vw, 40px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.successDescription {
+  margin: 16px 0 36px;
+  color: #8895a7;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+@keyframes screen-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 48px 24px;
+  }
+
+  .content {
+    padding: 64px 0;
+  }
+
+  .summaryRow {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 32px;
+  }
+
+  .summaryValue,
+  .actionList {
+    text-align: right;
+  }
+
+  .actionList {
+    list-style-position: inside;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screen {
+    animation: none;
+  }
+
+  .progressBar,
+  .input,
+  .option,
+  .primaryButton,
+  .secondaryButton {
+    transition: none;
+  }
+}
