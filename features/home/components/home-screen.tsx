@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 import { GoalCard } from "@/features/home/components/goal-card";
 import { HomeHeader } from "@/features/home/components/home-header";
 import { HomeSection } from "@/features/home/components/home-section";
@@ -6,6 +9,7 @@ import {
   activeGoals,
   activeGoalsSection,
   homeHeaderContent,
+  homePrimaryAction,
   placeholderSections,
 } from "@/features/home/mock-data";
 
@@ -13,6 +17,12 @@ export function HomeScreen() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[720px] px-5 py-12 sm:px-6 sm:py-20">
       <HomeHeader content={homeHeaderContent} />
+
+      <Button asChild className="mb-12 w-full sm:mb-14" size="lg">
+        <Link href={homePrimaryAction.href}>
+          {homePrimaryAction.label}
+        </Link>
+      </Button>
 
       <div className="space-y-12 sm:space-y-14">
         <HomeSection

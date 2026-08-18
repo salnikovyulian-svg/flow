@@ -14,6 +14,11 @@ export const homeHeaderContent: HomeHeaderContent = {
   },
 };
 
+export const homePrimaryAction = {
+  href: "/goals/new",
+  label: "New Decision",
+} as const;
+
 export const activeGoalsSection: HomeSectionContent = {
   id: "active-goals",
   title: "Active Goals",
