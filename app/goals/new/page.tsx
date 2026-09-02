@@ -1,5 +1,5 @@
-import { GoalContractFlow } from "@/features/goal-contract";
+import { DecisionContractFlow } from "@/features/decision-contract";
 
-export default function NewGoalContractPage() {
-  return <GoalContractFlow />;
+export default function NewDecisionPage() {
+  return <DecisionContractFlow />;
 }

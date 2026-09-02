@@ -1,22 +1,20 @@
-import type { HomeHeaderContent } from "@/features/home/types";
-
-type HomeHeaderProps = {
-  content: HomeHeaderContent;
-};
-
-export function HomeHeader({ content }: HomeHeaderProps) {
+export function HomeHeader() {
   return (
-    <header className="pb-16 sm:pb-20">
-      <p className="text-xs font-semibold tracking-[0.3em] text-primary">
-        {content.brand}
+    <header>
+      <p className="text-sm uppercase tracking-[0.3em] text-zinc-500">
+        FLOW
       </p>
 
-      <h1 className="mt-5 text-4xl font-medium leading-[1.08] tracking-[-0.05em] text-foreground sm:text-5xl">
-        <span className="block">{content.headline.primary}</span>
-        <span className="block text-muted-foreground">
-          {content.headline.secondary}
-        </span>
+      <h1 className="mt-3 text-5xl font-bold tracking-tight">
+        Build systems.
+        <br />
+        Not motivation.
       </h1>
+
+      <p className="mt-6 max-w-2xl text-lg text-zinc-400">
+        A personal operating system for decisions,
+        deep work and weekly reviews.
+      </p>
     </header>
   );
 }

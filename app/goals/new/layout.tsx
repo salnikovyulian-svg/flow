@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   title: "Decision Contract — Flow",
 };
 
-type GoalContractLayoutProps = {
+type DecisionContractLayoutProps = {
   children: ReactNode;
 };
 
-export default function GoalContractLayout({
+export default function DecisionContractLayout({
   children,
-}: GoalContractLayoutProps) {
+}: DecisionContractLayoutProps) {
   return (
     <div className={`${geistSans.variable} ${geistMono.variable}`}>
       {children}

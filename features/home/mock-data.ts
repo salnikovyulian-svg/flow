@@ -1,59 +1,50 @@
-import { Brain, Heart, Laptop } from "lucide-react";
-
 import type {
-  HomeGoal,
-  HomeHeaderContent,
-  HomeSectionContent,
-} from "@/features/home/types";
+  DashboardCard,
+  TodayState,
+} from "./types";
 
-export const homeHeaderContent: HomeHeaderContent = {
-  brand: "FLOW",
-  headline: {
-    primary: "Build systems.",
-    secondary: "Not motivation.",
-  },
+export const todayState: TodayState = {
+  title: "Financial Modeling",
+  description:
+    "Complete one Deep Work session for your active decision.",
+  action: "Start Deep Work",
+  href: "/deep-work",
 };
 
-export const homePrimaryAction = {
-  href: "/goals/new",
-  label: "New Decision",
-} as const;
-
-export const activeGoalsSection: HomeSectionContent = {
-  id: "active-goals",
-  title: "Active Goals",
-};
-
-export const activeGoals: readonly HomeGoal[] = [
+export const dashboardCards: DashboardCard[] = [
   {
-    current: 4,
-    icon: Brain,
-    id: "decision-making",
-    metric: "Deep Work",
-    target: 10,
-    title: "Decision Making",
+    id: "decision",
+    title: "Decision",
+    description: "Active decision",
+    status: "Active",
+    href: "/goals/new",
   },
   {
-    current: 2,
-    icon: Laptop,
-    id: "build-flow",
-    metric: "Sprint",
-    target: 8,
-    title: "Build Flow",
+    id: "workflow",
+    title: "Work Flow",
+    description: "Execution system",
+    status: "Ready",
+    href: "/work-flow",
   },
   {
-    current: 1,
-    icon: Heart,
-    id: "health",
-    metric: "Workout",
-    target: 4,
-    title: "Health",
+    id: "deep-work",
+    title: "Deep Work",
+    description: "Today's session",
+    status: "Not Started",
+    href: "/deep-work",
   },
-];
-
-export const placeholderSections: readonly HomeSectionContent[] = [
-  { id: "todays-focus", title: "Today's Focus" },
-  { id: "deep-work", title: "Deep Work" },
-  { id: "next-reward", title: "Next Reward" },
-  { id: "latest-update", title: "Latest Update" },
+  {
+    id: "end-day",
+    title: "End Of Day",
+    description: "Daily shutdown",
+    status: "Pending",
+    href: "/end-of-day",
+  },
+  {
+    id: "weekly",
+    title: "Weekly Review",
+    description: "Sunday reflection",
+    status: "Sunday",
+    href: "/weekly-review/history",
+  },
 ];
